@@ -1,0 +1,27 @@
+-- Create a clothing store database
+
+CREATE TABLE Store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, color TEXT, size TEXT);
+
+INSERT INTO Store VALUES (1, "Pants", 30, "Grey", "Small");
+INSERT INTO Store VALUES (2, "Skirt", 25, "Blue", "Medium");
+INSERT INTO Store VALUES (3, "Pants", 30, "Blue", "Small");
+INSERT INTO Store VALUES (4, "Blouse", 45, "White", "Medium");
+INSERT INTO Store VALUES (5, "Dress", 80, "Grey", "Medium");
+INSERT INTO Store VALUES (6, "Dress", 80, "White", "Large");
+INSERT INTO Store VALUES (7, "Skirt", 25, "Black", "Medium");
+INSERT INTO Store VALUES (8, "Socks", 15, "White", "Small");
+INSERT INTO Store VALUES (9, "Socks", 15, "White", "Medium");
+INSERT INTO Store VALUES (10, "Socks", 15, "White", "Large");
+INSERT INTO Store VALUES (11, "Blouse", 45, "Pink", "Large");
+INSERT INTO Store VALUES (12, "Coat", 100, "Brown", "Medium");
+INSERT INTO Store VALUES (13, "Coat", 100, "Grey", "Large");
+INSERT INTO Store VALUES (14, "Pants", 30, "Black", "Medium");
+INSERT INTO Store VALUES (15, "Dress", 80, "Brown", "Large");
+
+-- display store database by price
+
+SELECT * FROM Store ORDER BY price;
+
+-- only display items that are grey in color
+
+SELECT * FROM Store WHERE color = "Grey";
