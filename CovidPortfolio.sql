@@ -48,12 +48,12 @@ where continent is not null
 group by location
 order by TotalDeathCount desc
 
--- Break down by continent and income
+-- Break down by continent 
 
 select location, max(cast(total_deaths as int)) as TotalDeathCount
 from PortfolioProject..CovidDeaths
 --Where location like '%states%'
-where continent is null
+where continent is null and location not in ('World', 'High income','International','European Union', 'Upper middle income','Lower middle income' ,'Low income')
 group by location
 order by TotalDeathCount desc
 
