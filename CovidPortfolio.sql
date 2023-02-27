@@ -32,10 +32,10 @@ order by 1,2
 
 -- Looking at countries with highest infection rate compared to population
 
-select location,  population, Max(total_cases) as HighestInfectionCount, max((total_cases / population))*100 as PrecentPopulationInfected
+select location,  population, date, Max(total_cases) as HighestInfectionCount, max((total_cases / population))*100 as PrecentPopulationInfected
 from PortfolioProject..CovidDeaths
 --Where location like '%states%'
-group by location, population
+group by location, population, date
 order by PrecentPopulationInfected desc
 
 
